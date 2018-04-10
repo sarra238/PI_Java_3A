@@ -111,9 +111,9 @@ public class EvenementController implements Initializable {
             Alert alertNom = new InputValidation().getAlert("Description", "Saisissez une description ");
             alertNom.showAndWait();
         } 
-          if ((Datefin.getValue().toString().compareTo(Datefin.getValue().toString()))==-1){
+          if ((e.getDateDeb().compareTo(e.getDateFin()))==-1){
         s.AjouterEvenement(e);}
-          else { Alert alertNom = new InputValidation().getAlert("Description", "Saisissez une description ");
+          else { Alert alertNom = new InputValidation().getAlert("ooops", "date debut superieur a la date fin ");
             alertNom.showAndWait();}
         Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         primaryStage.close();
