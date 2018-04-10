@@ -111,7 +111,7 @@ public class EvenementController implements Initializable {
             Alert alertNom = new InputValidation().getAlert("Description", "Saisissez une description ");
             alertNom.showAndWait();
         } 
-          if (Datefin.getValue().toString().compareTo(Datefin.getValue().toString())==0){
+          if ((Datefin.getValue().toString().compareTo(Datefin.getValue().toString()))==-1){
         s.AjouterEvenement(e);}
           else { Alert alertNom = new InputValidation().getAlert("Description", "Saisissez une description ");
             alertNom.showAndWait();}
